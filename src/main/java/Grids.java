@@ -27,7 +27,7 @@ public class Grids {
     private Stage mainStage;
     private String lastSign;
     private VBox mainVbox;
-    private String whoWon;
+    private String whoWon = "";
     private Group group;
     private int pointsX;
     private int pointsO;
@@ -338,7 +338,7 @@ public class Grids {
 
         if (!((buttons[0][0].getText()).isEmpty()) && !((buttons[0][1].getText()).isEmpty()) && !((buttons[0][2].getText()).isEmpty()) &&
                 !((buttons[1][0].getText()).isEmpty()) && !((buttons[1][1].getText()).isEmpty()) && !((buttons[1][2].getText()).isEmpty()) &&
-                !((buttons[2][0].getText()).isEmpty()) && !((buttons[2][1].getText()).isEmpty()) && !((buttons[2][2].getText()).isEmpty())) {
+                !((buttons[2][0].getText()).isEmpty()) && !((buttons[2][1].getText()).isEmpty()) && !((buttons[2][2].getText()).isEmpty()) && this.whoWon.isEmpty()) {
             playAgainButton.setVisible(true);
             isDraw = true;
             disableButtons();
